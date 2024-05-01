@@ -15,6 +15,9 @@ jobs:
       matrix:
         goos: [ linux ]
         goarch: [ amd64 ]
+        include:
+          - goos: linux
+            goarch: arm64
       fail-fast: false
     runs-on: ubuntu-latest
     env:
