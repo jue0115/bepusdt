@@ -8,7 +8,7 @@ on:
 
 env:
   APP_NAME: bepusdt
-  DOCKERHUB_REPO: v03413/bepusdt
+  DOCKERHUB_REPO: jue115/bepusdt
 
 jobs:
   docker:
@@ -33,6 +33,7 @@ jobs:
           context: .
           platforms: |
             linux/amd64
+            linux/arm64
           push: true
           build-args: |
             APP_NAME=${{ env.APP_NAME }}
